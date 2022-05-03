@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/Web-Service-APP/wsprueba?WSDL" uri="wsdl/localhost_8080/Web-Service-APP/wsprueba.wsdl"/>
+    <system systemId="http://localhost:8080/Web-Service-APP/wsprueba?xsd=1" uri="wsdl/localhost_8080/Web-Service-APP/wsprueba.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WebApplication2/wsprueba?WSDL" uri="wsdl/localhost_8080/WebApplication2/wsprueba.wsdl"/>
+    <system systemId="http://localhost:8080/WebApplication2/wsprueba?xsd=1" uri="wsdl/localhost_8080/WebApplication2/wsprueba.xsd_1.xsd"/>
+</catalog>
