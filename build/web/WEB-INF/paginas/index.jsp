@@ -9,10 +9,12 @@
         <title>Welcome to Spring Web MVC project</title>
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link href="recursos/libs/datatables/datatables.min.css" rel="stylesheet" type="text/css"/>
-        <link  href="recursos/libs/datatables/dt-1.10.21/css/dataTables.bootstrap4.min.css?v=01" rel="stylesheet" >
+        <!--        <link href="recursos/libs/datatables/datatables.min.css" rel="stylesheet" type="text/css"/>
+                <link  href="recursos/libs/datatables/dt-1.10.21/css/dataTables.bootstrap4.min.css?v=01" rel="stylesheet" >-->
         <link rel="stylesheet" href="recursos/libs/ace-lib/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
         <link rel="stylesheet" href="recursos/libs/ace-lib/css/ace.css?v=03" class="ace-main-stylesheet" id="main-ace-style" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.4/css/select.bootstrap.min.css">
 
         <!--        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">-->
 
@@ -210,9 +212,14 @@
     <script src="recursos/libs/ace-lib/js/ace-elements.min.js"></script>
     <script src="recursos/libs/ace-lib/js/ace.min.js"></script>
 
-    <script src="recursos/js/evento/cliente/principal.js?v=01" type="text/javascript"></script>
-    <script src="recursos/libs/datatables/datatables.min.js?v=02" type="text/javascript"></script>
-    <script src="recursos/libs/datatables/dataTables.select.min.js?v=02" type="text/javascript"></script> 
+    <script src="recursos/js/evento/cliente/principal.js?v=04" type="text/javascript"></script>
+    <!--<script src="recursos/libs/datatables/datatables.min.js?v=02" type="text/javascript"></script>
+    <script src="recursos/libs/datatables/dataTables.select.min.js?v=02" type="text/javascript"></script> -->
+    <script src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js" ></script>
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.js" ></script>-->
+    <!--<script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js" ></script>-->
+    <!--<script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap.min.js" ></script>-->
+    <script src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js" ></script>
 
     <!--    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script></body>-->
 </html>

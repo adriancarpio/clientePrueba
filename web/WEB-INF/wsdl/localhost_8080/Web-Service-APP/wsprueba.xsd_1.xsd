@@ -6,6 +6,7 @@
 
 <xs:complexType name="operation">
 <xs:sequence>
+<xs:element name="procedimiento" type="xs:string"/>
 <xs:element name="dtoImput" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
 </xs:complexType>

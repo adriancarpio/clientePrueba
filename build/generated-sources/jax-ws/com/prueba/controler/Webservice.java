@@ -28,6 +28,7 @@ public interface Webservice {
     /**
      * 
      * @param dtoImput
+     * @param procedimiento
      * @return
      *     returns java.lang.String
      */
@@ -37,6 +38,8 @@ public interface Webservice {
     @ResponseWrapper(localName = "operationResponse", targetNamespace = "http://controler.prueba.com/", className = "com.prueba.controler.OperationResponse")
     @Action(input = "http://controler.prueba.com/webservice/operationRequest", output = "http://controler.prueba.com/webservice/operationResponse")
     public String operation(
+        @WebParam(name = "procedimiento", targetNamespace = "")
+        String procedimiento,
         @WebParam(name = "dtoImput", targetNamespace = "")
         List<String> dtoImput);
 

@@ -11,12 +11,9 @@ package com.ec.cliente.app.dt;
  */
 public class ClienteDatos {
 
-    public static String operation(java.util.List<java.lang.String> dtoImput) {
+    public static String operation(java.lang.String procedimiento, java.util.List<java.lang.String> dtoImput) {
         com.prueba.controler.Wsprueba service = new com.prueba.controler.Wsprueba();
         com.prueba.controler.Webservice port = service.getWebservicePort();
-        return port.operation(dtoImput);
-    }
-    
-    
-    
+        return port.operation(procedimiento, dtoImput);
+    }   
 }

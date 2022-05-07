@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -18,6 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
+ *         &lt;element name="procedimiento" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="dtoImput" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -29,11 +31,38 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "operation", propOrder = {
+    "procedimiento",
     "dtoImput"
 })
 public class Operation {
 
+    @XmlElement(required = true)
+    protected String procedimiento;
     protected List<String> dtoImput;
+
+    /**
+     * Obtiene el valor de la propiedad procedimiento.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getProcedimiento() {
+        return procedimiento;
+    }
+
+    /**
+     * Define el valor de la propiedad procedimiento.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setProcedimiento(String value) {
+        this.procedimiento = value;
+    }
 
     /**
      * Gets the value of the dtoImput property.

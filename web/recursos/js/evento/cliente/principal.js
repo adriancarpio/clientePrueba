@@ -9,11 +9,21 @@ function getViajes() {
     OBJ.OPCION = "CG";
 
     $.post('./ClienteServlet', {
+        opcion: "ConsCLiente",
         OBJ: OBJ
-    }, function (json) {
-        let obj = jQuery.parseJSON(json);
-        console.log(obj);
-        llenarTabla(obj.data);
+    }, function (datos) {
+        let obj = jQuery.parseJSON(datos);
+        //if (obj.codResponse === 00) {
+            console.log("OK " + obj.CodResponse + " " + obj.MsjResponse);
+            console.log("llego" + obj.List);
+            llenarTabla(obj.List);
+//        } else if (obj.CodResponse === "99") {
+//            llenarTabla([]);
+//            console.log("Error " + obj.CodResponse + " " + obj.MsjResponse);
+      //  } else {
+//            llenarTabla([]);
+//            console.log("Error " + obj.CodResponse + " " + obj.MsjResponse);
+//        }        
     });
 }
 

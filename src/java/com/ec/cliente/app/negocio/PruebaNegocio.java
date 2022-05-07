@@ -14,8 +14,8 @@ import java.util.List;
  */
 public class PruebaNegocio {
     
-    public String procesar(List<String> parametros) {
-        String resp = ClienteDatos.operation(parametros);
+    public String procesar(String procedimiento, List<String> parametros) {
+        String resp = ClienteDatos.operation(procedimiento, parametros);
         return resp;
     }
 
