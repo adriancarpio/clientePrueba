@@ -12,6 +12,7 @@
         <link href="recursos/img/favicon.ico" rel="shortcut icon" >   
         <link href="recursos/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css?v=02" rel="stylesheet" />
         <link href="recursos/css/bootstrap/bootstrap.min.css?v=02" rel="stylesheet" />
+        <link href="recursos/css/general/newcss.css?v=01" rel="stylesheet" />
         <link href="recursos/css/font-awesome/css/font-awesome.min.css?v=02" rel="stylesheet" />
         <link href="recursos/libs/datatables/datatables.min.css" rel="stylesheet" type="text/css"/>
         <link href="recursos/libs/selectboxit/selectboxit.css?v=02" rel="stylesheet" type="text/css" />

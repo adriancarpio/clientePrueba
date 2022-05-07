@@ -19,11 +19,11 @@ function initEvent() {
         initCrud("EL");
     });
 
-    $('#txt_valor').on('input', function () {
-        if ($("#cmb_grupo option:selected").text() === "COMISION") {
-            this.value = this.value.replace(/[^0-9,.]/g, '').replace(/,/g, '.');
-        }
-    });
+//    $('#txt_valor').on('input', function () {
+//        if ($("#cmb_grupo option:selected").text() === "COMISION") {
+//            this.value = this.value.replace(/[^0-9,.]/g, '').replace(/,/g, '.');
+//        }
+//    });
 
     $('#cmb_estado').on('change', function () {
         ValidCrud();
@@ -147,17 +147,16 @@ function llenarTabla(tabla, filas) {
             {data: 'USUARIO_INGRESO'},
             {data: 'FECHA_MODIFICACION'},
             {data: 'USUARIO_MODIFICACION'},
-            {data: 'ESTADO'}
-//            {data: 'ESTADO', width: "10%",
-//                className: "text-center",
-//                render: function (data, type, row) {
-//                    if (type === 'display' && data === 'S') {
-//                        return '<div class="circle_active"><span class="circle__content"></span></div>';
-//                    } else {
-//                        return '<div class="circle_inactive"><span class="circle__content"></span></div>';
-//                    }
-//                    return data;
-//                }}//,
+            {data: 'ESTADO', width: "10%",
+                className: "text-center",
+                render: function (data, type, row) {
+                    if (type === 'display' && data === 'S') {
+                        return '<div class="circle_active"><span class="circle__content"></span></div>';
+                    } else {
+                        return '<div class="circle_inactive"><span class="circle__content"></span></div>';
+                    }
+                    return data;
+                }}//,
         ]
         , columnDefs: [{
                 targets: [0, 5, 6],

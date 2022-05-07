@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/05/2022, 14:11:32
+    Author     : adria
+*/
+
+.circle_active {
+  display: inline-table;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-color: #28a745;
+  border-radius: 50%;
+}
+
+.circle_inactive {
+  display: inline-table;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-color: #dc3545;
+  border-radius: 50%;
+}
+
+.circle__content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
