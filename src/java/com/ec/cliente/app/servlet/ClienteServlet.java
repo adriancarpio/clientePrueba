@@ -7,6 +7,7 @@ package com.ec.cliente.app.servlet;
 
 import com.ec.cliente.app.negocio.PruebaNegocio;
 import com.google.gson.Gson;
+import com.graba.log.clases.ClsGrabaLog;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -51,7 +52,9 @@ public class ClienteServlet extends HttpServlet {
         String CodResponse = "", MsjResponse = "";
         String scontrol = "";
         String procedimiento = "";
+        short num = 3;
         PrintWriter out = response.getWriter();
+        ClsGrabaLog ObjLOG = new ClsGrabaLog("Cliente-APP");
         StringWriter stringWriter = new StringWriter();
         JSONWriter writer = new JSONWriter(stringWriter);
         Writer writer_error = new StringWriter();
@@ -73,6 +76,7 @@ public class ClienteServlet extends HttpServlet {
                         parametros.add(++index, request.getParameter("OBJ[ESTADO]") != null ? request.getParameter("OBJ[ESTADO]") : "");
                         parametros.add(++index, request.getParameter("OBJ[USUARIO]") != null ? request.getParameter("OBJ[USUARIO]") : "");
 
+                        ObjLOG.printmsg(num, getServletName(), "OP: PUB_CRUD_ROL =>" + parametros.toString());
                         respons = negocio.procesar(procedimiento, parametros);
 
                         resp_json = new JSONObject(respons);
@@ -83,12 +87,13 @@ public class ClienteServlet extends HttpServlet {
 
                         CodResponse = resp_json.get("CodResponse").toString();
                         MsjResponse = resp_json.get("MsjResponse").toString();
-
+                        ObjLOG.printmsg(num, getServletName() + " - " + op, "Metodo: " + "PUB_CRUD_ROL" + " RESPONSE: " + "[Codigo: " + CodResponse + " - Mensaje: " + MsjResponse + "]");
                         //String listaGson = gson.toJson(scontrol);
                     } catch (JSONException e) {
                         System.out.println(e.toString());
                         CodResponse = "99";
                         MsjResponse = "Error, ocurrió una excepción.";
+                        ObjLOG.printmsg(num, getServletName(), "OP: PUB_CRUD_ROL => Excepción:" + CodResponse + "-" + MsjResponse + " | " + e.toString());
                     } finally {
                         writer.object();
                         writer.key("List").value(scontrol);
@@ -123,6 +128,7 @@ public class ClienteServlet extends HttpServlet {
             }
             String respuesta = "{CodResponse:" + CodResponse + ",MsjResponse:" + MsjResponse + "}";
             System.out.println("TRX: " + op + " RESPONSE: " + respuesta);
+            ObjLOG.printmsg(num, getServletName(), "TRX: " + op + " RESPONSE: " + respuesta);
             out.print(stringWriter.toString());
         }
     }
